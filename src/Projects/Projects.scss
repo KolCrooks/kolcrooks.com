@@ -115,7 +115,7 @@ $filters-height: 5rem;
     }
     .card-title {
       text-align: center;
-      font-family: JetBrainsMono source-code-pro, Menlo, Monaco, Consolas;
+      font-family: JetBrainsMono, source-code-pro, Menlo, Monaco, Consolas;
       height: $chin-size;
     }
     .card-tags {
@@ -188,7 +188,7 @@ $filters-height: 5rem;
 }
 
 .code {
-  font-family: JetBrainsMono source-code-pro, Menlo, Monaco, Consolas;
+  font-family: JetBrainsMono, source-code-pro, Menlo, Monaco, Consolas;
   code {
     background-color: unset !important;
     color: unset !important;

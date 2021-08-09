@@ -9,7 +9,6 @@ import {
 import { useSpring, animated } from "react-spring";
 
 import Home from "./Home";
-import Resume from "./Resume";
 import Projects from "./Projects";
 import "./App.scss";
 import { useMediaQuery } from "react-responsive";
@@ -20,9 +19,6 @@ function goToCorrectPage() {
     case "":
       document.querySelector(".Home")?.scrollIntoView({ block: "end" });
       break;
-    case "resume":
-      document.querySelector(".Resume")?.scrollIntoView({ block: "end" });
-      break;
     case "projects":
       document.querySelector(".Projects")?.scrollIntoView({ block: "end" });
       break;
@@ -31,16 +27,13 @@ function goToCorrectPage() {
 function Dot() {
   const location = useLocation();
   let pos = 0;
-  const positions = 3;
+  const positions = 2;
   switch (location.pathname) {
     case "/":
       pos = 0;
       break;
-    case "/resume":
-      pos = 1;
-      break;
     case "/projects":
-      pos = 2;
+      pos = 1;
       break;
   }
   const dotAnimation = useSpring({
@@ -55,7 +48,6 @@ function Container() {
   return (
     <>
       <Home />
-      <Resume />
       <Projects />
     </>
   );
@@ -114,17 +106,6 @@ function App() {
         Home
       </Link>
       <Link
-        to={"/resume"}
-        className="Resume-Link"
-        onClick={() =>
-          document
-            .querySelector(".Resume")
-            ?.scrollIntoView({ behavior: "smooth", block: "end" })
-        }
-      >
-        Resume
-      </Link>
-      <Link
         to={"/projects"}
         className="Project-Link"
         onClick={() =>
@@ -139,7 +120,6 @@ function App() {
   );
   const routerContents = (
     <Switch>
-      <Route path="/resume" component={Container}></Route>
       <Route path="/projects" component={Container}></Route>
       <Route path="/" component={Container}></Route>
     </Switch>

@@ -21,15 +21,20 @@ function Home() {
           <div className="links">
             <div className="carrot-indicator">
               {"> "}
-              <a className="link-text" href="https://github.com/KolCrooks">
+              <a className="link-text" href="https://github.com/KolCrooks" target="_blank" rel="noreferrer">
                 Github
               </a>
             </div>
-            <div className="carrot-indicator">
+            {/* <div className="carrot-indicator">
               {"> "}
               <a className="link-text" href="https://linkedin.com/in/kolcrooks">
-                {" "}
                 LinkedIn
+              </a>
+            </div> */}
+            <div className="carrot-indicator">
+              {"> "}
+              <a className="link-text" href="/Resume.pdf" target="_blank">
+                Resume
               </a>
             </div>
           </div>
