@@ -12,7 +12,6 @@ import Home from "./Home";
 import Projects from "./Projects";
 import "./App.scss";
 import { useMediaQuery } from "react-responsive";
-import { IoMenu } from "react-icons/io5";
 
 function goToCorrectPage() {
   switch (window.location.href.split("/#/")[1]) {
